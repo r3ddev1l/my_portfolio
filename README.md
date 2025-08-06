@@ -1,16 +1,32 @@
-# portfolio
+# 💼 Srijan Maharjan – Portfolio Website
 
-A new Flutter project.
+This is my personal portfolio built using **Flutter Web**, showcasing my work, technical skills, and projects. The site is fully responsive and designed for both desktop and mobile devices.
 
-## Getting Started
+🌐 **Live Site:** [srijanmaharjan.com.np](https://srijanmaharjan.com.np)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🔧 Built With
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Flutter](https://flutter.dev/web) – for cross-platform web development
+- [Dart](https://dart.dev/) – programming language
+- [GitHub Pages](https://pages.github.com/) – for hosting
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 Features
+
+- Responsive design (desktop + mobile)
+- Projects and experience sections
+- Contact form
+- Smooth animations and transitions
+
+---
+
+## 📦 How to Run Locally
+
+```bash
+git clone https://github.com/r3ddev1l/my_portfolio.git
+cd my_portfolio
+flutter pub get
+flutter run -d chrome
