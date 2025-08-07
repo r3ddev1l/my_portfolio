@@ -1,0 +1,15 @@
+{
+    "@@locale": "en",
+    "comingSoon": "Coming Soon!",
+    "underConstruction": "This site is under construction.",
+    "srijanMaharjanPortfolio": "Srijan Maharjan's Portfolio",
+    "@comingSoon": {
+        "description": "Title text shown when site is not ready"
+    },
+    "@underConstruction": {
+        "description": "Subtitle text explaining the site is being built"
+    },
+    "@srijanMaharjanPortfolio": {
+        "description": "Title"
+    }
+}
