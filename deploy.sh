@@ -16,6 +16,9 @@ mkdir ../gh-pages-temp
 # Copy the web build into the temp directory
 cp -r build/web/* ../gh-pages-temp/
 
+# Add CNAME file for custom domain
+echo "www.srijanmaharjan.com.np" > ../gh-pages-temp/CNAME
+
 # Navigate to the temp directory
 cd ../gh-pages-temp
 
