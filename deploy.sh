@@ -7,7 +7,7 @@ set -e
 read -p "Enter commit message for gh-pages: " commit_msg
 
 # Build the Flutter web app
-flutter build web
+flutter build web --release
 
 # Create a temporary directory for gh-pages
 rm -rf ../gh-pages-temp
