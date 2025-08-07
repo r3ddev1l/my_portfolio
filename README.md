@@ -2,7 +2,7 @@
 
 This is my personal portfolio built using **Flutter Web**, showcasing my work, technical skills, and projects. The site is fully responsive and designed for both desktop and mobile devices.
 
-🌐 **Live Site:** [srijanmaharjan.com.np](https://srijanmaharjan.com.np)
+🌐 **Live Site:** [srijanmaharjan.com.np](https://www.srijanmaharjan.com.np)
 
 ---
 
