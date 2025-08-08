@@ -17,52 +17,57 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Consumer<LocaleProvider>(
-          builder: (context, localeProvider, _) {
-            final loc = AppLocalizations.of(context)!;
-            return Text(loc.srijanMaharjanPortfolio);
-          },
-        ),
-        actions: [
-          Consumer<ThemeProvider>(
-            builder: (context, themeProvider, _) {
-              return IconButton(
-                icon: Icon(
-                  themeProvider.isDarkMode ? Icons.dark_mode : Icons.light_mode,
-                ),
-                tooltip: themeProvider.isDarkMode ? "Dark Mode" : "Light Mode",
-                onPressed: () => themeProvider.toggleTheme(),
-              );
+    return Consumer<LocaleProvider>(
+      builder: (context, localeProvider, _) {
+        final loc = AppLocalizations.of(context)!;
+
+        return Scaffold(
+          appBar: AppBar(
+            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+            title: Text(loc.srijanMaharjanPortfolio),
+            actions: [
+              Consumer<ThemeProvider>(
+                builder: (context, themeProvider, _) {
+                  return IconButton(
+                    icon: Icon(
+                      themeProvider.isDarkMode
+                          ? Icons.dark_mode
+                          : Icons.light_mode,
+                    ),
+                    tooltip: themeProvider.isDarkMode
+                        ? loc.darkMode
+                        : loc.lightMode,
+                    onPressed: () => themeProvider.toggleTheme(),
+                  );
+                },
+              ),
+            ],
+          ),
+          body: ResponsiveLayout(
+            builder: (context, screenSize) {
+              final padding = getResponsivePadding(context);
+              final fontScale = getFontScale(context);
+
+              Widget content;
+
+              if (screenSize == ScreenSize.large) {
+                content = HomeScreenBodyLarge(
+                  padding: padding,
+                  fontScale: fontScale,
+                );
+              } else {
+                content = HomeScreenBodySmallMedium(
+                  padding: padding,
+                  fontScale: fontScale,
+                  screenSize: screenSize,
+                );
+              }
+
+              return Center(child: content);
             },
           ),
-        ],
-      ),
-      body: ResponsiveLayout(
-        builder: (context, screenSize) {
-          final padding = getResponsivePadding(context);
-          final fontScale = getFontScale(context);
-
-          Widget content;
-
-          if (screenSize == ScreenSize.large) {
-            content = HomeScreenBodyLarge(
-              padding: padding,
-              fontScale: fontScale,
-            );
-          } else {
-            content = HomeScreenBodySmallMedium(
-              padding: padding,
-              fontScale: fontScale,
-              screenSize: screenSize,
-            );
-          }
-
-          return Center(child: content);
-        },
-      ),
+        );
+      },
     );
   }
 }

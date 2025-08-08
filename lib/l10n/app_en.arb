@@ -3,6 +3,8 @@
     "comingSoon": "Coming Soon!",
     "underConstruction": "This site is under construction.",
     "srijanMaharjanPortfolio": "Srijan Maharjan's Portfolio",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode",
     "@comingSoon": {
         "description": "Title text shown when site is not ready"
     },
@@ -11,5 +13,11 @@
     },
     "@srijanMaharjanPortfolio": {
         "description": "Title"
+    },
+    "@lightMode": {
+        "description": "Light Mode"
+    },
+    "@darkMode": {
+        "description": "Dark Mode"
     }
 }

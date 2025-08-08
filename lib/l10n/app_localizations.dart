@@ -112,6 +112,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Srijan Maharjan\'s Portfolio'**
   String get srijanMaharjanPortfolio;
+
+  /// Light Mode
+  ///
+  /// In en, this message translates to:
+  /// **'Light Mode'**
+  String get lightMode;
+
+  /// Dark Mode
+  ///
+  /// In en, this message translates to:
+  /// **'Dark Mode'**
+  String get darkMode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

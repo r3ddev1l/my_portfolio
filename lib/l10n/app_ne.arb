@@ -3,6 +3,8 @@
     "comingSoon": "चाँडै आउँदैछ!",
     "underConstruction": "यो साइट निर्माणाधीन छ।",
     "srijanMaharjanPortfolio": "सृजन महर्जनको पोर्टफोलियो",
+    "lightMode": "लाइट मोड",
+    "darkMode": "गाढा मोड",
     "@comingSoon": {
         "description": "साइट तयार नभएको अवस्थामा देखिने शीर्षक"
     },
@@ -11,5 +13,11 @@
     },
     "@srijanMaharjanPortfolio": {
         "description": "शीर्षक"
+    },
+    "@lightMode": {
+        "description": "लाइट मोड"
+    },
+    "@darkMode": {
+        "description": "गाढा मोड"
     }
 }

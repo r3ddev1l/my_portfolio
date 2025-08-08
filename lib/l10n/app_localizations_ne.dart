@@ -16,4 +16,10 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get srijanMaharjanPortfolio => 'सृजन महर्जनको पोर्टफोलियो';
+
+  @override
+  String get lightMode => 'लाइट मोड';
+
+  @override
+  String get darkMode => 'गाढा मोड';
 }
