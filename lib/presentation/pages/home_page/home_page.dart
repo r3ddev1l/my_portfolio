@@ -4,6 +4,7 @@ import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:portfolio/presentation/pages/home_page/components/home_page_large.dart';
 import 'package:portfolio/presentation/pages/home_page/components/home_page_small_medium.dart';
 import 'package:portfolio/providers/locale_providers.dart';
+import 'package:portfolio/providers/theme_providers.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,6 +26,19 @@ class _HomePageState extends State<HomePage> {
             return Text(loc.srijanMaharjanPortfolio);
           },
         ),
+        actions: [
+          Consumer<ThemeProvider>(
+            builder: (context, themeProvider, _) {
+              return IconButton(
+                icon: Icon(
+                  themeProvider.isDarkMode ? Icons.dark_mode : Icons.light_mode,
+                ),
+                tooltip: themeProvider.isDarkMode ? "Dark Mode" : "Light Mode",
+                onPressed: () => themeProvider.toggleTheme(),
+              );
+            },
+          ),
+        ],
       ),
       body: ResponsiveLayout(
         builder: (context, screenSize) {

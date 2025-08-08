@@ -3,12 +3,18 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:portfolio/presentation/pages/home_page/home_page.dart';
 import 'package:portfolio/providers/locale_providers.dart';
+import 'package:portfolio/providers/theme_providers.dart';
+import 'package:portfolio/themes/themes.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => LocaleProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => LocaleProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+      ],
+
       child: const MyApp(),
     ),
   );
@@ -25,6 +31,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     final localeProvider = Provider.of<LocaleProvider>(context);
+    final themeProvider = Provider.of<ThemeProvider>(context);
 
     return MaterialApp(
       locale: localeProvider.locale,
@@ -36,11 +43,9 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       title: 'Srijan Maharjan',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 255, 17, 0),
-        ),
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: themeProvider.getCurrentTheme,
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
