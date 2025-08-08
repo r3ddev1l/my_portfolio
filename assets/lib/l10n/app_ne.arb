@@ -1,0 +1,15 @@
+{
+    "@@locale": "ne",
+    "comingSoon": "चाँडै आउँदैछ!",
+    "underConstruction": "यो साइट निर्माणाधीन छ।",
+    "srijanMaharjanPortfolio": "सृजन महर्जनको पोर्टफोलियो",
+    "@comingSoon": {
+        "description": "साइट तयार नभएको अवस्थामा देखिने शीर्षक"
+    },
+    "@underConstruction": {
+        "description": "साइट निर्माणाधीन रहेको व्याख्या"
+    },
+    "@srijanMaharjanPortfolio": {
+        "description": "शीर्षक"
+    }
+}
